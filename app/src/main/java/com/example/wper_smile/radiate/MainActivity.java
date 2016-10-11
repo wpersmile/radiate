@@ -18,10 +18,10 @@ public class MainActivity extends AppCompatActivity {
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent=new Intent("android.intent.action.MY_BROADCAST");
+                Intent intent=new Intent();
+                intent.setAction("android.intent.action.MY_BROADCAST");
                 intent.putExtra("ME", "这是一条广播.");
                 sendBroadcast(intent);
-                //Toast.makeText(MainActivity.this, "aaaaa", Toast.LENGTH_SHORT).show();
             }
         });
     }
